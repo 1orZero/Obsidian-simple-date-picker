@@ -1,4 +1,4 @@
-import Calendar from "components/calendar";
+import Calendar from "components/Calendar";
 import { App, Modal } from "obsidian";
 import * as React from "react";
 import { createRoot, Root } from "react-dom/client";

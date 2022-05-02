@@ -164,11 +164,7 @@ function Days({
 				: () => null,
 		};
 	});
-	console.log(renderDaysArray);
 
-	const onClickHandler = (day: Dayjs) => {
-		const result = onClick(day.format("YYYY-MM-DD"));
-	};
 	return (
 		<div className="PickerDaysContainer">
 			{renderDaysArray.map((day, index) => {

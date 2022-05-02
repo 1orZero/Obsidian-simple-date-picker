@@ -37,7 +37,7 @@ export default class MyPlugin extends Plugin {
 			editorCallback: (editor: Editor, view: MarkdownView) => {
 
 				const insertDate = (date:string) => {
-					editor.replaceRange(`[[${date}]]`, editor.getCursor());
+					editor.replaceSelection(`[[${date}]]`);
 				};
 
 				 new DatePickerView(this.app, insertDate ).open();
