@@ -132,7 +132,7 @@ function CalendarMonthView({
 function Weeks() {
 	const weeks = ["S", "M", "T", "W", "T", "F", "S"];
 	return (
-		<div className="PickerWeeksContainer">
+		<div className="PickerWeeksContainer ">
 			{weeks.map((week, index) => (
 				<div key={index} className="PickerWeeksItem">
 					{week}
@@ -149,8 +149,13 @@ function Days({
 	onClick: (date: string) => void;
 }) {
 	let active = false;
-	const classObject = () =>
-		active ? "PickerDaysItemActive" : "PickerDaysItemInactive";
+	const classObject = (day: Dayjs) => {
+		const isToday = dayjs().isSame(day, "day");
+		if (isToday) return "PickerDaysItemIsToday";
+
+		return active ? "PickerDaysItemActive" : "PickerDaysItemInactive";
+	};
+
 	const renderDaysArray = daysArray.map((day, index) => {
 		if (day.day === 1) {
 			active = !active;
@@ -158,7 +163,7 @@ function Days({
 		return {
 			day: day.day,
 			dayjs: day.dayjs,
-			className: classObject(),
+			className: classObject(day.dayjs),
 			onClick: active
 				? () => onClick(day.dayjs.format("YYYY-MM-DD"))
 				: () => null,

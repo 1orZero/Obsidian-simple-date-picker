@@ -5,6 +5,9 @@
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
+		"concurrent": "concurrently npm:watch:*",
+		"watch:js": "node esbuild.config.mjs",
+		"watch:css": "npx tailwindcss -i ./calendar-styles.css -o ./styles.css --watch",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
@@ -27,6 +30,7 @@
 		"typescript": "4.4.4"
 	},
 	"dependencies": {
+		"concurrently": "^7.1.0",
 		"dayjs": "^1.11.1",
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0"

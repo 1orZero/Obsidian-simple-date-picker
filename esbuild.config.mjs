@@ -51,4 +51,5 @@ esbuild
 		treeShaking: true,
 		outfile: "main.js",
 	})
+	.then(() => console.log("⚡ Done"))
 	.catch(() => process.exit(1));

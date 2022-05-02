@@ -15,9 +15,12 @@ export class DatePickerView extends Modal {
 			this.close();
 		};
 	}
-
 	async onOpen() {
-		this.root.render(<Calendar onClick={this.onClick} />);
+		this.root.render(
+			<>
+				<Calendar onClick={this.onClick} />
+			</>
+		);
 	}
 
 	async onClose() {
