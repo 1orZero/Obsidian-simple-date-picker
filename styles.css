@@ -1,0 +1,93 @@
+.Picker {
+	display: grid;
+	user-select: none;
+}
+.PickerHeader {
+	display: grid;
+	place-items: center;
+	height: 100%;
+	border-top-left-radius: 0.75rem;
+	border-top-right-radius: 0.75rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-auto-rows: minmax(0, 1fr);
+	width: 100%;
+}
+.PickerHeaderMonthYearTitle {
+	font-size: var(--h3);
+	color: var(--text-accent);
+}
+
+.PickerHeaderButton {
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.PickerHeaderButton:hover,
+.PickerHeaderButton:active {
+	color: var(--text-accent);
+	font-size: 150%;
+}
+
+.PickerDaysView {
+	padding: 0.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.PickerWeeksContainer {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(7, minmax(0, 3rem));
+	grid-auto-flow: row;
+	grid-auto-rows: 3rem;
+}
+.PickerWeeksItem {
+	display: flex;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.PickerDaysContainer {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(7, minmax(0, 3rem));
+	grid-auto-flow: row;
+	grid-auto-rows: 3rem;
+}
+
+.PickerDaysItemInactive {
+	display: flex;
+	color: #6b7280;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.PickerDaysItemActive {
+	display: flex;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.PickerDaysItemActive:hover,
+.PickerDaysItemActive:active {
+	background-color: var(--text-accent);
+	color: var(--text-on-accent);
+}

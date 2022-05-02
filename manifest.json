@@ -1,0 +1,10 @@
+{
+	"id": "simple-date-picker",
+	"name": "Simple Date Picker",
+	"version": "0.0.1",
+	"minAppVersion": "0.12.0",
+	"description": "This plugin is aim for the users who wants to insert date link quickly by click from the date-picker provided by the plugin.",
+	"author": "kameng",
+	"authorUrl": "https://github.com/1orZero",
+	"isDesktopOnly": false
+}
